@@ -8,7 +8,8 @@ const spawn = require("child_process").spawn;
 let d = {"name":"yourName", "age":20};
 
 // Defining the python process as a spawn object
-// First argument is the directory to the python virtual env
+// First argument is the directory to the python virtual env -> you can specify your own python interpreter's path here.
+// If you have added python to your path variable then simply use "python" othervise give your virtual env's path
 // Second argument is a collection with reference to the python file and the argument data
 const pythonProcess = spawn('./.env/Scripts/python', ['./test.py', JSON.stringify(d)]);
 
